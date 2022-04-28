@@ -1,0 +1,35 @@
+body {
+    font-family: Helvetica;
+}
+
+h1,
+.item__title,
+.item__heading,
+.item__spe {
+    font-weight: bold;
+}
+
+h1 {
+    font-size: 100px;
+    color: khaki;
+    text-align: center;
+    background-image: url('./img/pattern.webp');
+}
+
+.item__title {
+    font-size: 32px;
+    color: white;
+    background-color: mediumseagreen;
+}
+
+.item:nth-of-type(2) .item__title {
+    background-color: lightcoral;
+}
+
+.item:nth-of-type(3) .item__title {
+    background-color: skyblue;
+}
+
+.item__spe {
+    color: blue;
+}
