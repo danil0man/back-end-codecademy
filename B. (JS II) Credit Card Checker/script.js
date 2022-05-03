@@ -67,11 +67,11 @@ const findInvalidCards = (arrayOfCards) => {
 
 const invalidCards = findInvalidCards(batch);
 
-const idInvalidCardCompanies = (arryOfInvalidNr) => {
+const idInvalidCardCompanies = (arrayOfInvalidNr) => {
     const companies = [];
 
     // depending of the first digit add the company to the companies array
-    arryOfInvalidNr.forEach((card) => {
+    arrayOfInvalidNr.forEach((card) => {
         switch (card[0]) {
             case 3:
                 companies.push('American Express');
