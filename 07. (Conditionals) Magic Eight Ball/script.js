@@ -3,8 +3,10 @@ const userQuestion = 'Will I finish school?';
 const randomNumber = Math.floor(Math.random() * 8) + 1;
 let eightBall;
 
+// Check if there is a username and print dependent of it
 const log = username ? `Hello ${username}` : 'Hello';
 
+// Depending on the random number, choose an answer
 switch (randomNumber) {
     case 1:
         eightBall = 'It is certain';
@@ -35,6 +37,7 @@ switch (randomNumber) {
         break;
 }
 
+// Log a formatted string with the answer
 console.log(log);
 console.log(username ? `${username} ask: ${userQuestion}` : `Someone ask: ${userQuestion}`);
 console.log(`The answer is: ${eightBall}`);

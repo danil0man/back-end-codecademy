@@ -1,3 +1,5 @@
+// This function take a user input and makes it lowercase.
+// Then it compares if the user input is part of the alternative otherwise give error message
 const getUserChoice = (userInput) => {
     const toLower = userInput.toLowerCase();
 
@@ -8,6 +10,7 @@ const getUserChoice = (userInput) => {
     console.log('This is an invalid value');
 };
 
+// This function randomly select an option for the computer
 const getComputerChoice = () => {
     const choice = Math.floor(Math.random() * 3);
     let type;
@@ -29,6 +32,7 @@ const getComputerChoice = () => {
     return type;
 };
 
+// Depending on the answer of user and computer, choose a winner
 const determineWinner = (userChoice, computerChoice) => {
     if (userChoice === computerChoice) {
         return 'This is a tie';
@@ -47,10 +51,12 @@ const determineWinner = (userChoice, computerChoice) => {
     }
 };
 
+// This function starts the game and show the winner in a formatted string
 const playGame = (choice) => {
     const userChoice = getUserChoice(choice);
     const computerChoice = getComputerChoice();
 
+    // Add a cheat code. If the user choice is bomb, the player cheats and automatic wins
     return choice === 'bomb'
         ? 'Player Cheats and Won'
         : `User: ${userChoice}, computer: ${computerChoice}
