@@ -55,4 +55,3 @@ while (instances.length < 30) {
         ++newNumber;
     }
 }
-console.log(instances);
