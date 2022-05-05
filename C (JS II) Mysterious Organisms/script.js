@@ -32,6 +32,11 @@ const pAquorFactory = (number, dnaArray) => ({
             (countMatch / this.dna.length) * 100
         )}% DNA in common`;
     },
+    willLikelySurvive() {
+        let countSurvivability = 0;
+        this.dna.forEach((element) => (element === 'C' || element === 'G' ? countSurvivability++ : null));
+        return Math.round((countSurvivability / this.dna.length) * 100) >= 60;
+    },
 });
 
 const specimen1 = pAquorFactory(1, mockUpStrand());
@@ -40,3 +45,14 @@ const specimen3 = pAquorFactory(3, mockUpStrand());
 
 // specimen1.mutate();
 // specimen1.compareDNA(specimen2);
+// specimen1.willLikelySurvive();
+const instances = [];
+let newNumber = 4;
+while (instances.length < 30) {
+    const newInstance = pAquorFactory(newNumber, mockUpStrand());
+    if (newInstance.willLikelySurvive()) {
+        instances.push(newInstance);
+        ++newNumber;
+    }
+}
+console.log(instances);
