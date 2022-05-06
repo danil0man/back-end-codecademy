@@ -9,12 +9,14 @@ const team = {
         { opponent: 'Happy Monkeys', teamPoints: 89, opponentPoints: 89 },
         { opponent: 'Sax X', teamPoints: 120, opponentPoints: 45 },
     ],
+    // two getter functions
     get players() {
         return this._players;
     },
     get games() {
         return this._games;
     },
+    // This methods add a new player or a new game to the respective arrays
     addPlayer(newFirstName, newLastName, newAge) {
         const player = {
             firstName: newFirstName,
@@ -31,6 +33,7 @@ const team = {
         };
         this._games.push(game);
     },
+    // This method calculate the average points and return a formatted string
     averageTeamPoints() {
         let totalPoints = 0;
         for (const key of this._games) {

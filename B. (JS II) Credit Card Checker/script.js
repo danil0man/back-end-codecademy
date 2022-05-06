@@ -48,7 +48,7 @@ const validateCred = (array) => {
         i % 2 === 1 && i !== 0 ? doubleNumbers.push(element * 2) : doubleNumbers.push(element)
     );
 
-    // Substract 9 from all numbers that are bigger than 9
+    // Subtract 9 from all numbers that are bigger than 9
     const subBy9 = [];
     doubleNumbers.forEach((element) => (element > 9 ? subBy9.push(element - 9) : subBy9.push(element)));
 
@@ -65,6 +65,7 @@ const findInvalidCards = (arrayOfCards) => {
     return invalidArray;
 };
 
+// Create an array with invalid numbers
 const invalidCards = findInvalidCards(batch);
 
 const idInvalidCardCompanies = (arrayOfInvalidNr) => {
