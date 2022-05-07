@@ -65,7 +65,7 @@ let newNumber = 4;
 while (instances.length < 30) {
     // temporal instance
     const newInstance = pAquorFactory(newNumber, mockUpStrand());
-    // Check if it will sruvive. If true push to the array
+    // Check if it will survive. If true push to the array
     if (newInstance.willLikelySurvive()) {
         instances.push(newInstance);
         // increase the number by 1
